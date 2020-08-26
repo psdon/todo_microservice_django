@@ -2,40 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89d5299-0697-4b6d-bce9-a6cfc4afcdad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/todo/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/api/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/todo_microservice_django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/todo_microservice_django.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mkdocs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/todo/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/todo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/settings/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/settings/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/settings/production.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/todo/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/todo/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/requirements/base.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo/requirements/base.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/requirements/local.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo/requirements/local.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/requirements/production.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo/requirements/production.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/requirements/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo/requirements/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/wait_for_postgres.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/wait_for_postgres.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +70,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="462" y="276" key="com.intellij.ide.util.TipDialog/0.0.1600.900@0.0.1600.900" timestamp="1598424492886" />
-    <state x="522" y="353" width="548" height="196" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1598426201782">
+    <state x="522" y="353" width="548" height="196" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1598438808269">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="522" y="353" width="548" height="196" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1600.900@0.0.1600.900" timestamp="1598426201782" />
+    <state x="522" y="353" width="548" height="196" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1600.900@0.0.1600.900" timestamp="1598438808269" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

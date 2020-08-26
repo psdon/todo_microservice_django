@@ -18,13 +18,11 @@ from django.conf.urls.static import static
 from django.http import JsonResponse
 from django.urls import path
 
-from .views import TodoListAPIView
-
-
-def sample_request(request):
-    return JsonResponse({"message": "hello world"})
+from .views import TodoListAPIView, TodoDetailAPIView
 
 
 urlpatterns = [
-                  path('', TodoListAPIView.as_view(), name="todo_list"),
+                  path('api/v1/todo/<user_id>/', TodoListAPIView.as_view(), name="todo_list"),
+                  # path('api/v1/todo/<user_id>/create/', TodoCreateAPIView.as_view(), name="todo_create"),
+                  path('api/v1/todo/<user_id>/<int:pk>/', TodoDetailAPIView.as_view(), name="todo_detail"),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -12,3 +12,4 @@ startup.sh
 *client_secret.json
 *.sqlite*
 microsetup
+static
