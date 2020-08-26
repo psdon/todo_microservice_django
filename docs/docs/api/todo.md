@@ -1,7 +1,33 @@
 # Todo
 CRUD endpoints for Todo owned by User
 
-## Buy Stock
+## Get List of Todos
+
+**Request**:
+
+`GET` `/api/v1/todo/<user_id>/`
+
+Parameters:
+
+**Response**:
+
+```json
+Content-Type application/json
+200 Ok
+
+[
+  {
+        "id": 6,
+        "name": "some tasks",
+        "todo_status": "nc",
+        "active_status": true,
+        "date_added": "2020-08-26T10:17:05.097054Z",
+        "date_updated": "2020-08-26T10:20:34.845735Z"
+    },
+]
+```
+
+## Add Task
 
 **Request**:
 
@@ -11,12 +37,10 @@ Parameters:
 
 Name         | Type   | Required | Description
 -------------|--------|----------|------------
-stock_symbol | string | Yes      | The stock symbol you will buy (i.e. JFC)
-quantity     | integer| Yes      | How many stocks to buy.
+name          | string | Yes      | What's the task?
+todo_status   | enum | Yes      | Completed or Not Completed?
+active_status | boolean| Yes      | If True, then it's marked as deleted
 
-*Note:*
-
-- **[Authorization Protected](authentication.md)**
 
 **Response**:
 
@@ -25,87 +49,24 @@ Content-Type application/json
 201 Created
 
 {
-  "stock_symbol": "JFC",
-  "quantity": 1
-}
-```
-
-## Sell Stock
-
-**Request**:
-
-`POST` `/api/v1/stocks/sell/`
-
-Parameters:
-
-Name         | Type   | Required | Description
--------------|--------|----------|------------
-stock_symbol | string | Yes      | The stock symbol you will sell (i.e. JFC)
-quantity     | integer| Yes      | How many stocks to sell.
-
-*Note:*
-
-- **[Authorization Protected](authentication.md)**
-
-**Response**:
-
-```json
-Content-Type application/json
-201 Created
-
-{
-  "stock_symbol": "JFC",
-  "quantity": 1
+    "id": 7,
+    "name": "some tasks",
+    "todo_status": "nc",
+    "active_status": true,
+    "date_added": "2020-08-26T10:17:05.097054Z",
+    "date_updated": "2020-08-26T10:20:34.845735Z"
 }
 ```
 
 
-## List Owned Stocks
+## Retrive Todo Data
 
 **Request**:
 
-`GET` `/api/v1/stocks/`
+`GET` `/api/v1/todo/<user_id>/<todo_id>/`
 
 Parameters:
 
-
-*Note:*
-
-- **[Authorization Protected](authentication.md)**
-
-**Response**:
-
-```json
-Content-Type application/json
-200 Ok
-
-[
-    {
-        "stock_symbol": "JFC",
-        "price": 10.4,
-        "quantity": 6,
-        "total_value": 62.400000000000006
-    }
-]
-```
-
-
-## Get Owned Stock Details
-
-**Request**:
-
-`GET` `/api/v1/stocks/:stock_symbol/`
-
-Parameters:
-
-Name         | Type   | Required | Description
--------------|--------|----------|------------
-stock_symbol | string | Yes      | The stock symbol you will sell (i.e. JFC)
-
-
-*Note:*
-
-- **[Authorization Protected](authentication.md)**
 
 **Response**:
 
@@ -114,9 +75,43 @@ Content-Type application/json
 200 Ok
 
 {
-    "stock_symbol": "JFC",
-    "price": 10.4,
-    "quantity": 6,
-    "total_value": 62.400000000000006
+    "id": 7,
+    "name": "some tasks",
+    "todo_status": "nc",
+    "active_status": true,
+    "date_added": "2020-08-26T10:17:05.097054Z",
+    "date_updated": "2020-08-26T10:20:34.845735Z"
+}
+```
+
+
+## Update Todo
+
+**Request**:
+
+`PUT` `/api/v1/todo/<user_id>/<todo_id>/`
+
+Parameters:
+
+Name          | Type   | Required | Description
+--------------|--------|----------|------------
+name          | string | Yes      | What's the task?
+todo_status   | enum   | Yes      | Completed or Not Completed?
+active_status | boolean| Yes      | If True, then it's marked as deleted
+
+
+**Response**:
+
+```json
+Content-Type application/json
+200 Ok
+
+{
+    "id": 7,
+    "name": "updated tasks",
+    "todo_status": "nc",
+    "active_status": true,
+    "date_added": "2020-08-26T10:17:05.097054Z",
+    "date_updated": "2020-08-26T10:20:34.845735Z"
 }
 ```
