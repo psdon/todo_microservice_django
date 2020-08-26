@@ -13,13 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from django.http import JsonResponse
+from django.urls import path
+
+from .views import TodoListAPIView
 
 
 def sample_request(request):
     return JsonResponse({"message": "hello world"})
 
+
 urlpatterns = [
-    path('', sample_request),
-]
+                  path('', TodoListAPIView.as_view(), name="todo_list"),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
