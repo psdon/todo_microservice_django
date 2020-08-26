@@ -16,7 +16,7 @@ services:
       - ./todo/:/code
     ports:
       - "8000:8000"
-    restart: unless-stopped
+    restart: always
     env_file: ./todo/common.env
     depends_on:
       - postgres
