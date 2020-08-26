@@ -1,0 +1,18 @@
+# Django
+django
+django-environ
+django-cors-headers
+
+# Extensions
+djangorestframework==3.11.1
+
+# Database
+psycopg2-binary
+dj-database-url==0.5.0
+
+# Library
+requests>=2.20.0
+
+# Server
+uvicorn
+gunicorn

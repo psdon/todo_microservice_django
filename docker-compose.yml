@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:11.6
+
+  todo:
+    build:
+      context: ./todo
+      dockerfile: ./Dockerfile
+    command: >
+      bash -c "python wait_for_postgres.py &&
+               python manage.py migrate &&
+               python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./todo/:/code
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    env_file: ./todo/common.env
+    depends_on:
+      - postgres
+
+
+#  documentation:
+#    restart: always
+#    build: ./docs
+#    command: "mkdocs serve"
+#    volumes:
+#      - ./:/code
+#    ports:
+#      - "8001:8001"
