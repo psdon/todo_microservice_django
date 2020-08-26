@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89d5299-0697-4b6d-bce9-a6cfc4afcdad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/todo/api/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docs/api/todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs/api/todo.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/views.py" afterDir="false" />
     </list>

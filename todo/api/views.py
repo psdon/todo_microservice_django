@@ -4,10 +4,10 @@ from rest_framework import mixins
 from rest_framework.response import Response
 
 from .serializers import TodoSerializer, TodoCreateSerializer
+from .utils import validate_user_id
 
 
-class TodoListAPIView(mixins.ListModelMixin, mixins.CreateModelMixin,
-                      generics.GenericAPIView):
+class TodoListAPIView(generics.ListAPIView, mixins.CreateModelMixin):
     serializer_class = TodoSerializer
 
     def get_queryset(self):
@@ -15,9 +15,15 @@ class TodoListAPIView(mixins.ListModelMixin, mixins.CreateModelMixin,
         return queryset
 
     def get(self, request, *args, **kwargs):
+        if not validate_user_id(kwargs.get("user_id")):
+            return Response(data={"detail": "User ID does not exists"}, status=status.HTTP_404_NOT_FOUND)
+
         return self.list(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
+        if not validate_user_id(kwargs.get("user_id")):
+            return Response(data={"detail": "User ID does not exists"}, status=status.HTTP_404_NOT_FOUND)
+
         request.data._mutable = True
         request.data['user_id'] = kwargs.get("user_id")
 
@@ -37,12 +43,21 @@ class TodoDetailAPIView(generics.GenericAPIView, mixins.RetrieveModelMixin, mixi
         return queryset
 
     def get(self, request, *args, **kwargs):
+        if not validate_user_id(kwargs.get("user_id")):
+            return Response(data={"detail": "User ID does not exists"}, status=status.HTTP_404_NOT_FOUND)
+
         return self.retrieve(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):
+        if not validate_user_id(kwargs.get("user_id")):
+            return Response(data={"detail": "User ID does not exists"}, status=status.HTTP_404_NOT_FOUND)
+
         return self.update(request, *args, **kwargs)
 
     def delete(self, request, *args, **kwargs):
+        if not validate_user_id(kwargs.get("user_id")):
+            return Response(data={"detail": "User ID does not exists"}, status=status.HTTP_404_NOT_FOUND)
+
         instance = self.get_object()
         instance.active_status = False
 
@@ -52,8 +67,6 @@ class TodoDetailAPIView(generics.GenericAPIView, mixins.RetrieveModelMixin, mixi
         self.perform_update(serializer)
 
         if getattr(instance, '_prefetched_objects_cache', None):
-            # If 'prefetch_related' has been applied to a queryset, we need to
-            # forcibly invalidate the prefetch cache on the instance.
             instance._prefetched_objects_cache = {}
 
         return Response(serializer.data)
